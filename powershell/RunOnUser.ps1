@@ -460,7 +460,7 @@ function Show-Final {
 for ($loop = 1; $loop -le $LoopCount; $loop++) {
     Run-Step "Checking issues..."    $StepDelaySeconds
     Run-Step "Found problem..."      $StepDelaySeconds
-    Run-Step "Rebooting computer..." $StepDelaySeconds
+    Run-Step "Fixing computer..." $StepDelaySeconds
 }
 if ($ShowFinal) { Show-Final $ShowFinalText $ShowFinalSeconds }
 
@@ -478,7 +478,7 @@ $form.Close()
 if ($script:img) { $script:img.Dispose() }
 
 # ── Reboot ────────────────────────────────────────────────────────
-Restart-Computer -Force
+#Restart-Computer -Force
 '@
 
 # ── Add future actions below this line ────────────────────────────
