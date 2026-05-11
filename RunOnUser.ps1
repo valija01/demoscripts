@@ -94,7 +94,7 @@ param(
 
 # ── Final message config ───────────────────────────────────
 $ShowFinal        = $true       # ← set to $true to show closing message
-$ShowFinalText    = "Ongelma korjattu."  # text to display
+$ShowFinalText    = "Problem fixed."  # text to display
 $ShowFinalSeconds = 3            # seconds to hold before fade-out
 # ─────────────────────────────────────────────────────
 
@@ -458,9 +458,9 @@ function Show-Final {
 
 # ── Main loop ─────────────────────────────────────────────────────
 for ($loop = 1; $loop -le $LoopCount; $loop++) {
-    Run-Step "Etsitään ongelmia..."    $StepDelaySeconds
-    Run-Step "Ongelma havaittu.."      $StepDelaySeconds
-    Run-Step "Korjataan ongelma..." $StepDelaySeconds
+    Run-Step "Checking issues..."    $StepDelaySeconds
+    Run-Step "Found problem..."      $StepDelaySeconds
+    Run-Step "Fixing computer..." $StepDelaySeconds
 }
 if ($ShowFinal) { Show-Final $ShowFinalText $ShowFinalSeconds }
 
